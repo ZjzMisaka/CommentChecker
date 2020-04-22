@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\bin\Debug\CommentChecker.exe.config
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\bin\Debug\CommentChecker.exe
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\bin\Debug\CommentChecker.pdb
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker_MarkupCompile.cache
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker_MarkupCompile.lref
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.g.resources
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.Properties.Resources.resources
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.exe
+C:\Users\Administrator\Desktop\CommentChecker\CommentChecker\obj\Debug\CommentChecker.pdb
