@@ -173,7 +173,7 @@ namespace CommentChecker
             }
             else
             {
-                System.Windows.MessageBox.Show(ngCount + " NG");
+                System.Windows.MessageBox.Show(ngCount + " FILE(s) NG");
             }
 
         }
@@ -183,6 +183,8 @@ namespace CommentChecker
 
             string startComment = "";
             string endComment = "";
+
+            bool result = true;
 
             System.Windows.Application.Current.Dispatcher.Invoke(() => {
                 startComment = tb_startcomment.Text;
@@ -226,7 +228,7 @@ namespace CommentChecker
                 startIndex = mcStart.Count > 0 ? mcStart[0].Index : -1;
                 endIndex = mcEnd.Count > 0 ? mcEnd[0].Index : -1;
                 lastStartIndex = mcStart.Count > 0 ? mcStart[mcStart.Count - 1].Index : -1;
-                lastEndIndex = mcEnd.Count > 0 ? mcEnd[mcStart.Count - 1].Index : -1;
+                lastEndIndex = mcEnd.Count > 0 ? mcEnd[mcEnd.Count - 1].Index : -1;
             }
 
             if (startIndex == -1 && endIndex != -1)
@@ -249,8 +251,8 @@ namespace CommentChecker
             }
             if (startIndex > endIndex)
             {
-                startIndex = fileContent.IndexOf(startComment);
-                errorIndex = fileContent.IndexOf(endComment);
+                // startIndex = fileContent.IndexOf(startComment);
+                // errorIndex = fileContent.IndexOf(endComment);
 
                 string currentErrorText = fileName + "\n";
                 lineNumber = fileContent.Substring(0, startIndex == -1 ? 0 : startIndex).Split('\n').Count();
@@ -261,12 +263,12 @@ namespace CommentChecker
                 {
                     tb_errortext.Text += currentErrorText;
                 });
-                return false;
+                result = false;
             }
             if (lastStartIndex > lastEndIndex)
             {
-                errorIndex = fileContent.LastIndexOf(startComment);
-                lastEndIndex = fileContent.LastIndexOf(endComment);
+                // errorIndex = fileContent.LastIndexOf(startComment);
+                // lastEndIndex = fileContent.LastIndexOf(endComment);
 
                 string currentErrorText = fileName + "\n";
                 lineNumber = fileContent.Substring(0, errorIndex == -1 ? 0 : errorIndex).Split('\n').Count();
@@ -277,7 +279,7 @@ namespace CommentChecker
                 {
                     tb_errortext.Text += currentErrorText;
                 });
-                return false;
+                result = false;
             }
 
             startIndex = 0;
@@ -289,7 +291,7 @@ namespace CommentChecker
             {
                 if(stopFlag)
                 {
-                    return true;
+                    return result;
                 }
 
                 string currentStartComment = startFirst ? startComment : endComment;
@@ -341,8 +343,8 @@ namespace CommentChecker
                     {
                         tb_errortext.Text += currentErrorText;
                     });
-                    
-                    return false;
+
+                    result = false;
                 }
 
                 if (endIndex == -1)
@@ -353,7 +355,7 @@ namespace CommentChecker
                 startIndex = endIndex;
                 startFirst = startFirst == true ? false : true;
             }
-            return true;
+            return result;
         }
 
 
