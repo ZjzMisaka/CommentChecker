@@ -179,6 +179,16 @@ namespace CommentChecker
         }
         private bool CheckFile(string fileName, bool isIgnoreSpace, bool isTolower, bool isRegexp)
         {
+            if (!File.Exists(fileName))
+            {
+                string currentErrorText = "找不到文件: " + fileName + "\n\n";
+                tb_errortext.Dispatcher.Invoke(() =>
+                {
+                    tb_errortext.Text += currentErrorText;
+                });
+                return false;
+            }
+
             int lineNumber;
 
             string startComment = "";
